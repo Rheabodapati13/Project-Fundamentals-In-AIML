@@ -1,5 +1,5 @@
 def printSolution(board):
-    """Print the chessboard configuration."""
+    """Print  the chessboard configuration."""
     for row in board:
         print(" ".join("Q" if col else "." for col in row))
     print("\n")
@@ -21,7 +21,7 @@ def  isSafe(board, row,col,n):
 
     # Check upper-right diagonal
     i, j = row, col
-    while i >= 0 and  j < n:
+    while i >= 0 and   j < n:
         if board[i][j]:
             return   False
         i -= 1
@@ -29,7 +29,7 @@ def  isSafe(board, row,col,n):
 
     return True
 def  solveNQueens(board, row, n):
-    """Use backtracking  to solve the N-Queens problem."""
+    """Use backtracking  to solve the N-Queens problen."""
     if row == n:
         printSolution(board)
         return True
@@ -47,7 +47,7 @@ def  solveNQueens(board, row, n):
 
 def nQueens(n):
     """Driver function to solve the N-Queens problem."""
-    board = [[0] * n for _ in range(n)]
+    board = [[0] * n  for _ in range(n)]
     if not solveNQueens(board, 0, n):
         print("No solution exists.")
     else:
