@@ -25,7 +25,7 @@ def  isSafe(board, row,col,n):
         if board[i][j]:
             return   False
         i -= 1
-        j += 1
+        j -= 1
 
     return True
 def  solveNQueens(board, row, n):
